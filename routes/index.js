@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Todo = require("../models/ReadOnlyTodoModel");
-const { pick } = require("../helpers/generalHelpers");
+const { pick } = require("verylodash");
 const searchFieldsPicker = pick(["title", "description"]);
 
 const optimizeQuery = (queryObj) =>
